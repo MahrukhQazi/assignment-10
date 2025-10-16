@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px; 
+  background-color: tomato;
+  color: white;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hero Section */
+.hs {
+  height: 100vh;
+  background-image: url(https://cdn.shopify.com/s/files/1/0507/2096/4799/files/69538118_1155314721525528_580174988481396736_o_e27c6c1b-1157-48f4-9a58-62d088f9692d.jpg?v=1617184893);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hc {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.hc h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hc p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.hc button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hc button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Card Section */
+.featured-products {
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #f5f7fa;
+  margin-top: 80px; 
+}
+
+.featured-products h2 {
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+  color: #0077b6;
+}
+
+.product-card p {
+  padding: 0 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.product-card button {
+  background-color: #0077b6;
+  border: none;
+  padding: 10px 20px;
+  margin: 15px 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #005f8e;
+}
+.product-card button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 18px;
+}
+
+.f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.f a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===============================
+   RESPONSIVE
+================================*/
+
+/* Tablets */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hc h1 {
+    font-size: 30px;
+  }
+
+  .hc p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hc h1 {
+    font-size: 24px;
+  }
+
+  .hc p {
+    font-size: 14px;
+  }
+
+  .f {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
